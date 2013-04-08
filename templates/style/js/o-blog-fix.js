@@ -5,6 +5,8 @@
 $(document).ready(
     function() {
 
+    $('.navbar-inner .nav-collapse > ul').addClass("nav");
+
 	/* create the top menu bar */
 	var dropdown = $('.navbar-inner .nav-collapse > ul li ul').parent();
 	dropdown.parent().addClass("nav");
