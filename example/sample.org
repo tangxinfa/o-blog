@@ -125,37 +125,15 @@ This is a sample blog to explain how [[https://github.com/renard/o-blog][o-blog]
   :SNIPPET:  t
   :END:
 
-- [[file:{lisp}(ob:path-to-root){/lisp}/features.html][/icon-cog icon-white/ Features]]
-
-- [[file:#][/icon-book icon-white/ Documentation]]
-  - [[file:{lisp}(ob:path-to-root){/lisp}/templates.html][Templates]]
-  - [[file:{lisp}(ob:path-to-root){/lisp}/structures.html][Structures]]
-  - [[file:{lisp}(ob:path-to-root){/lisp}/functions.html][Functions]]
-  - 
-  - [[file:{lisp}(ob:path-to-root){/lisp}/faq.html][FAQ]]
-  - 
-  - [[file:{lisp}(ob:path-to-root){/lisp}/bug-report.html][Bug report]]
-
-- [[file:#][/icon-file icon-white/ Tips]]
-  - [[file:{lisp}(format "%s/%s" (ob:path-to-root) (ob:post-htmlfile (ob:get-last-post "Tips" 0))){/lisp}][{lisp}(ob:post-title (ob:get-last-post "Tips" 0)){/lisp}]]
-  - [[file:{lisp}(format "%s/%s" (ob:path-to-root) (ob:post-htmlfile (ob:get-last-post "Tips" 1))){/lisp}][{lisp}(ob:post-title (ob:get-last-post "Tips" 1)){/lisp}]]
-  - [[file:{lisp}(format "%s/%s" (ob:path-to-root) (ob:post-htmlfile (ob:get-last-post "Tips" 2))){/lisp}][{lisp}(ob:post-title (ob:get-last-post "Tips" 2)){/lisp}]]
-  - [[file:{lisp}(format "%s/%s" (ob:path-to-root) (ob:post-htmlfile (ob:get-last-post "Tips" 3))){/lisp}][{lisp}(ob:post-title (ob:get-last-post "Tips" 3)){/lisp}]]
-  - [[file:{lisp}(format "%s/%s" (ob:path-to-root) (ob:post-htmlfile (ob:get-last-post "Tips" 4))){/lisp}][{lisp}(ob:post-title (ob:get-last-post "Tips" 4)){/lisp}]]
-
 - [[file:{lisp}(ob:path-to-root){/lisp}/tags.html][/icon-tags icon-white/ Tags]]
 
 - [[file:{lisp}(ob:path-to-root){/lisp}/archives.html][/icon-list icon-white/ Archives]]
-
-- [[file:{lisp}(ob:path-to-root){/lisp}/testimonials.html][/icon-comments-alt icon-white/ Testimonials]]
 
 - [[file:{lisp}(ob:path-to-root){/lisp}/index.xml][/icon-rss icon-white/ RSS]]
 
 - [[file:{lisp}(ob:path-to-root){/lisp}/changelog.html][/icon-pencil icon-white/ Changelog]]
 
 - [[file:{lisp}(ob:path-to-root){/lisp}/roadmap.html][/icon-tasks icon-white/ Roadmap]]
-
-- [[file:{lisp}(ob:path-to-root){/lisp}/debug.html][(debug)]]
 
 ** Navigation Footer
   :PROPERTIES:
@@ -169,8 +147,6 @@ This is a sample blog to explain how [[https://github.com/renard/o-blog][o-blog]
   - [[file:{lisp}(ob:path-to-root){/lisp}/tags.html][/icon-tags icon-white/ Tags]]
 
   - [[file:{lisp}(ob:path-to-root){/lisp}/archives.html][/icon-list icon-white/ Archives]]
-
-  - [[file:{lisp}(ob:path-to-root){/lisp}/testimonials.html][/icon-comments-alt icon-white/ Testimonials]]
 
   - [[file:{lisp}(ob:path-to-root){/lisp}/roadmap.html][/icon-tasks icon-white/ Roadmap]]
 
