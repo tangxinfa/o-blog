@@ -41,7 +41,9 @@
      :debug-posts-header "Posts"
      :debug-static-pages-header "Static pages"
      :debug-snippet-header "Snippets"
-     :debug-tags-header "Tags")
+     :debug-tags-header "Tags"
+     :changelog "Changelog"
+     :roadmap "Roadmap")
     ("fr"
      :posted-on "Posté le"
      :post-timestamp "%A %d %B %Y à %H:%M:%S"
@@ -97,7 +99,7 @@
      :home "首页"
      :tags "标签"
      :archives "归档"
-     :rss "RSS"
+     :rss "订阅"
      :about "关于"
      :links "链接"
      :powered-by "功能取自"
@@ -110,7 +112,9 @@
      :debug-posts-header "博文"
      :debug-static-pages-header "固定页面"
      :debug-snippet-header "网页片断"
-     :debug-tags-header "标签" ))
+     :debug-tags-header "标签"
+     :changelog "更新日志"
+     :roadmap "路线图" ))
 
   "Translation ALIST used by `ob:gettext'. Each item consists of
 language as `car' and translation items as `cdr'.

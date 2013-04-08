@@ -1,5 +1,15 @@
 <lisp>(ob:insert-template "page_header.html")</lisp>
 <article>
+  <header class="article-header">
+    <div class="page-header">
+      <div class="row">
+	<div class="span1">
+	  <lisp>(ob:insert-template "plugin_qrcode.html")</lisp>
+	</div>
+	<h1 class="offset1" style="font-size: 250%;"><lisp>(ob:gettext :archives)</lisp></h1>
+      </div>
+    </div>
+  </header>
   <div class="article-content">
     <nav class="archives">
       <lisp>(ob:insert-template "index_archives.html")</lisp>

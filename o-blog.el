@@ -715,6 +715,7 @@ headers and body."
 		 ;; First try old function signatures, then on failure
 		 ;; use new argument call.
 		 (or
+		  (ignore-errors (org-export-as-html nil nil 'string t nil))
 		  (ignore-errors (org-export-as-html nil nil nil 'string t))
 		  (ignore-errors (org-export-as-html nil nil 'string t))
 		  (org-export-as 'html nil nil t nil))))
@@ -958,6 +959,8 @@ If provided CATEGORY YEAR and MONTH are used to select articles."
 	into ret
 	else if (member gc '(Zs))
 	collect "-" into ret
+    else
+    collect (format "-%x" (car cd)) into ret
 	finally return (replace-regexp-in-string
 			"--+" "-"
 			(replace-regexp-in-string

@@ -52,7 +52,6 @@
 
 html {
     height: 100%;
-    background: @black;
 }
 
 
@@ -89,7 +88,7 @@ html {
 
 #page {
 
-    padding-top: 2 * @navbarHeight;
+    padding-top: 1.5 * @navbarHeight;
     marging-top: @navbarHeight;
 
 
@@ -123,6 +122,9 @@ html {
 	      margin-bottom: 0;
 	      margin-top: @baseLineHeight;
 	}
+    .pager a {
+          padding: 3px 10px;
+    }
     }
 
 
@@ -221,16 +223,25 @@ html {
 
     .navtags(350%);
 
-
+    .article-footer nav {
+    display: inline;
+    padding-left: 4.0em;
+    }
     .article-footer {
+    padding: 5px;
+    font-size: 1.0em;
 	&.well {
 	    background: lighten(#f5f5f5, 1%);
 
 	    h1 {
 		font-size: 1.0em;
+        font-weight: normal;
+        text-shadow: 1px 1px 1px #BBBBBB;
 		margin: 0;
+        display: inline;
 	    }
 	    .tag-cloud ul {
+		display: inline;
 		margin-bottom: 0;
 		li {
 		    display: inline;
@@ -253,8 +264,8 @@ html {
 }
 
 .footer-font-size() {
-    font-size: 0.85 * @baseFontSize / (18/13);
-    line-height: 0.95 * @baseLineHeight / (18/13);
+    font-size: 0.80 * @baseFontSize;
+    line-height: 0.90 * @baseLineHeight;
 }
 
 #footer {
@@ -266,19 +277,14 @@ html {
     padding-top: @baseLineHeight / (18/13);
 
     a {
-	color: lighten(@gray, 15%);
+	color: darken(@gray, 30%);
     }
 
     h1 {
-	color: darken(@blue, 20%);
-	a {
-	    color: darken(@blue, 20%);
-	}
-	a:hover {
-	    zoom: 1.1;
-	}
+    font-size: 1.5em;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px #BBBBBB;
     }
-
     .copyright {
 	opacity:  0.35;
 	margin-top: 3em;
@@ -297,6 +303,9 @@ html {
 
     .navtags(100%);
 
+    background-image: none;
+    background-color: #F5F5F5;
+    border-top: 1px solid #E5E5E5;
 }
 
 
@@ -318,4 +327,8 @@ html {
 	font-size: 75%;
 	line-height: 15px;
     }
+}
+
+code {
+    color: black;
 }
