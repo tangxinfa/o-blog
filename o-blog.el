@@ -335,14 +335,15 @@ defined, or interactivelly called with `prefix-arg'.
 			(get-file-buffer file)
 			(find-file file))
     (run-hooks 'o-blog-before-publish-hook)
-    (let* (;; Make sure `org-todo-keyword' is not set to a particular value
+    (let* ((BLOG (ob-parse-blog-headers))
+           (system-time-locale (concat (replace-regexp-in-string "-" "_" (ob:blog-language BLOG)) ".utf8")))
+     (let* (;; Make sure `org-todo-keyword' is not set to a particular value
 	   ;; by user.
 	   (org-todo-keywords (default-value 'org-todo-keywords))
 	   (start-time (current-time)) ;; for statistic purposes only
 	   ;; make sure we are on the correct directory.
 	   (default-directory (file-name-directory file))
 	   STATIC
-	   (BLOG (ob-parse-blog-headers))
 	   (STATIC (append STATIC
 			   (ob-parse-entries
 			    (org-map-entries 'point-marker
@@ -379,7 +380,7 @@ defined, or interactivelly called with `prefix-arg'.
       (message (format "Blog %s published in %ss"
 		       file
 		       (format-time-string "%s.%3N"
-					   (time-subtract (current-time) start-time)))))))
+					   (time-subtract (current-time) start-time))))))))
 
 
 (defun ob-do-copy (src dst &optional copyf args)
@@ -1082,7 +1083,7 @@ set ISO8601 \"%Y-%m-%dT%TZ\" format would be used."
 		((listp date)
 		 date)))
 	 (format (or format "%Y-%m-%dT%TZ"))
-	 (system-time-locale locale))
+	 (system-time-locale (if locale locale system-time-locale)))
     (format-time-string format date)))
 
 (defun ob:get-last-post (&optional category nth)

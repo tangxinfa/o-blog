@@ -102,7 +102,7 @@
      :rss "订阅"
      :about "关于"
      :links "链接"
-     :powered-by "功能取自"
+     :powered-by "Powered by"
      :debug-blog "导出博客信息"
      :debug-post "导出博文信息"
      :debug-tag "导出标签信息"
