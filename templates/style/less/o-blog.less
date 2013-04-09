@@ -91,11 +91,11 @@ html {
     padding-top: 1.5 * @navbarHeight;
     marging-top: @navbarHeight;
 
-
-    .article-header{
     h1 {
        font-size: 1.5em;
     }
+
+    .article-header{
 	.date {
 	    border: 1px solid @grayLight;
 	    display: inline-block;
@@ -106,7 +106,7 @@ html {
 		color: fade(@linkColor, 50%);
 	    }
 	    .date-d {
-		font-size: 1.5em;
+		font-size: 1.2em;
 	    }
 	    .date-m {
 		text-transform: uppercase;
@@ -134,6 +134,7 @@ html {
 
 
     .article-content {
+    padding-top: 10px;
 	@outlineShift: 1em;
 	.outline-1 { margin-left: 1 * @outlineShift; }
 	.outline-2 { margin-left: 2 * @outlineShift; }
