@@ -56,10 +56,8 @@
     <lisp>(ob:post-content-html POST)</lisp>
   </div>
   
-  <footer class="well article-footer">
-    <lisp>(ob:gettext :posted-on)</lisp> <time datetime="<lisp> (ob:format-date (ob:post-timestamp POST)) </lisp>"> <lisp> (ob:format-date (ob:post-timestamp POST) (ob:gettext :post-timestamp))</lisp></time>.
+  <footer class="article-footer">
     <nav class="tag-cloud">
-      <h1><i class="icon-tags"></i> <lisp>(ob:gettext :related-tags)</lisp></h1>
       <ul>
 	<lisp>
 	  (loop for tag in (ob:post-tags POST)
@@ -68,6 +66,9 @@
 	</lisp>
       </ul>
     </nav>
+    <span class="muted">
+      <lisp>(ob:gettext :posted-on)</lisp> <time datetime="<lisp> (ob:format-date (ob:post-timestamp POST)) </lisp>"> <lisp> (ob:format-date (ob:post-timestamp POST) (ob:gettext :post-timestamp))</lisp></time>
+    </span>
   </footer>
   </div>
   <lisp>(ob:insert-template "plugin_disqus.html")</lisp>
