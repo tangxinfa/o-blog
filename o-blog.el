@@ -960,7 +960,7 @@ If provided CATEGORY YEAR and MONTH are used to select articles."
 	else if (member gc '(Zs))
 	collect "-" into ret
     else
-    collect (format "-%x" (car cd)) into ret
+    collect (format "%x" c) into ret
 	finally return (replace-regexp-in-string
 			"--+" "-"
 			(replace-regexp-in-string
