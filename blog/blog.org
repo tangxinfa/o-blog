@@ -1,0 +1,95 @@
+#+TITLE: o-blog
+#-DESCRIPTION: A stand-alone blogging system for Org-mode.
+#+DATE: 2013-02-08 19:33:26
+#+LANGUAGE: en
+#+STARTUP: logdone
+
+#-TEMPLATE_DIR: templates
+#+URL: http://tangxinfa.github.com/o-blog
+
+#+DEFAULT_CATEGORY: Posts
+#+DISQUS: renard-o-blog
+#+FILENAME_SANITIZER: ob-sanitize-string
+#+POST_SORTER: ob-sort-posts-by-title
+
+#+POST_BUILD_SHELL: cmd 1
+#+POST_BUILD_SHELL: cmd 2
+#+POST_BUILD_SHELL: cmd 3
+#+POST_BUILD_SHELL: cmd 4
+
+
+* Home
+  :PROPERTIES:
+  :PAGE:     index.html
+  :TEMPLATE: blog_static_no_title.html
+  :END:
+
+#+begin_o_blog_hero_unit
+#+HTML: <h1>o-blog</h1>
+
+A stand-alone blog and publication tool for [[http://orgmode.org/][Org-mode]].
+#+end_o_blog_hero_unit
+
+* Blog details
+** Copyright
+  :PROPERTIES:
+  :SNIPPET:  t
+  :END:
+
+Copyright © 2013 tangxinfa. Published under the therm of the [[http://creativecommons.org/licenses/by-nc-sa/2.0/fr/][Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License]].
+
+** About
+  :PROPERTIES:
+  :SNIPPET:  t
+  :END:
+
+This is a personal blog system.
+
+** Navigation
+  :PROPERTIES:
+  :SNIPPET:  t
+  :END:
+
+- [[file:{lisp}(ob:path-to-root){/lisp}/tags.html][/icon-tags icon-white/ {lisp}(ob:gettext :tags){/lisp}]]
+
+- [[file:{lisp}(ob:path-to-root){/lisp}/archives.html][/icon-list icon-white/ {lisp}(ob:gettext :archives){/lisp}]]
+
+- [[file:{lisp}(ob:path-to-root){/lisp}/index.xml][/icon-rss icon-white/ {lisp}(ob:gettext :rss){/lisp}]]
+
+
+** Navigation Footer
+  :PROPERTIES:
+  :SNIPPET:  t
+  :END:
+
+  - [[file:{lisp}(ob:path-to-root){/lisp}/index.html][/icon-home icon-white/ {lisp}(ob:gettext :home){/lisp}]]
+
+  - [[file:{lisp}(ob:path-to-root){/lisp}/tags.html][/icon-tags icon-white/ {lisp}(ob:gettext :tags){/lisp}]]
+
+  - [[file:{lisp}(ob:path-to-root){/lisp}/archives.html][/icon-list icon-white/ {lisp}(ob:gettext :archives){/lisp}]]
+
+  - [[file:{lisp}(ob:path-to-root){/lisp}/index.xml][/icon-rss icon-white/ {lisp}(ob:gettext :rss){/lisp}]]
+
+  - [[file:{lisp}(ob:path-to-root){/lisp}/changelog.html][/icon-pencil icon-white/ {lisp}(ob:gettext :changelog){/lisp}]]
+
+
+** {lisp}(ob:gettext :tags){/lisp}
+  :PROPERTIES:
+  :PAGE:     tags.html
+  :TEMPLATE: blog_post-by-tags.html
+  :END:
+
+
+* Changelog
+  :PROPERTIES:
+  :PAGE:     changelog.html
+  :END:
+
+- 2013-04-09
+  - Initialize the skeleton blog system.
+
+* Posts
+** DONE Wellcome                                               :o@blog:
+   CLOSED: [2012-01-07 Sat 00:13]
+
+   Wellcom to build blog web site with [[http://renard.github.com/o-blog][o-blog]].
