@@ -43,7 +43,8 @@
      :debug-snippet-header "Snippets"
      :debug-tags-header "Tags"
      :changelog "Changelog"
-     :roadmap "Roadmap")
+     :roadmap "Roadmap"
+     :recent-comments "Recent Comments")
     ("fr"
      :posted-on "Posté le"
      :post-timestamp "%A %d %B %Y à %H:%M:%S"
@@ -114,7 +115,8 @@
      :debug-snippet-header "网页片断"
      :debug-tags-header "标签"
      :changelog "更新日志"
-     :roadmap "路线图" ))
+     :roadmap "路线图"
+     :recent-comments "最新评论"))
 
   "Translation ALIST used by `ob:gettext'. Each item consists of
 language as `car' and translation items as `cdr'.
