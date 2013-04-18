@@ -200,7 +200,11 @@ This is a good place for o-blog parser plugins."
 
  - content-html: HTML export of the post.
 
- - sitemap: Whether to publish in sitemap."
+ - sitemap: Whether to publish in sitemap.
+
+ - archive-htmlfile: full relative path to the post html file (file and
+   directory) ignore the specified :PAGE: property.
+"
   
   id
   title
@@ -217,7 +221,8 @@ This is a good place for o-blog parser plugins."
   path-to-root
   content
   content-html
-  sitemap)
+  sitemap
+  archive-htmlfile)
 
 
 (defstruct (ob:tags :named)
@@ -634,13 +639,13 @@ See also `ob-set-default-filepath', `ob-parse-entry'."
 	   (filename (or (org-entry-get (point) "CUSTOM_ID")
 			 (ob:sanitize-string title)))
 	   (filepath (funcall (ob:blog-posts-filepath BLOG) category-safe year month))
-	   (htmlfile (funcall (ob:blog-posts-htmlfile BLOG) filepath day filename)))
+	   (htmlfile (funcall (ob:blog-posts-htmlfile BLOG) filepath day filename))
+       (archive-htmlfile htmlfile))
 
       (when page
 	(setq htmlfile page
 	      filename (file-name-sans-extension (file-name-nondirectory htmlfile))
 	      filepath (file-name-directory htmlfile)))
-
       (let ((content (ob-get-entry-text)))
 	(make-ob:post :title title
 		      :tags tags
@@ -660,6 +665,7 @@ See also `ob-set-default-filepath', `ob-parse-entry'."
 				 :name category
 				 :safe category-safe)
 		      :sitemap (or (org-entry-get (point) "SITEMAP"))
+              :archive-htmlfile archive-htmlfile
 		      )))))
 
 
