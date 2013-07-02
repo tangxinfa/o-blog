@@ -44,7 +44,8 @@
      :debug-tags-header "Tags"
      :changelog "Changelog"
      :roadmap "Roadmap"
-     :recent-comments "Recent Comments")
+     :recent-comments "Recent Comments"
+     :recent-posts "Recent Posts")
     ("fr"
      :posted-on "Posté le"
      :post-timestamp "%A %d %B %Y à %H:%M:%S"
@@ -116,7 +117,8 @@
      :debug-tags-header "标签"
      :changelog "更新日志"
      :roadmap "路线图"
-     :recent-comments "最新评论"))
+     :recent-comments "最新评论"
+     :recent-posts "最新文章"))
 
   "Translation ALIST used by `ob:gettext'. Each item consists of
 language as `car' and translation items as `cdr'.
