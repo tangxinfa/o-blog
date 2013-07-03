@@ -2,14 +2,16 @@
       <div id="sidebar" class="span3">
         <h5><lisp>(ob:gettext :recent-posts)</lisp></h5>
         <div id="recent-posts">
-          <lisp>
-		    (loop for p in (let ((POSTS ALL-POSTS)) (ob:get-posts nil 10))
-		    do (insert (format "<li><a href=\"%s/%s\">%s</a></li> "
-		    (ob:path-to-root)
-		    (ob:post-htmlfile p)
-		    (ob:post-title p)
-		    )))
-		  </lisp>
+          <ul>
+            <lisp>
+		      (loop for p in (let ((POSTS ALL-POSTS)) (ob:get-posts nil 10))
+		      do (insert (format "<li><a href=\"%s/%s\">%s</a></li> "
+		      (ob:path-to-root)
+		      (ob:post-htmlfile p)
+		      (ob:post-title p)
+		      )))
+		    </lisp>
+          </ul>
         </div>
 	    <h5><lisp>(ob:gettext :tags)</lisp></h5>
         <div id="tags">
