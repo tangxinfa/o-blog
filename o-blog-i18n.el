@@ -96,7 +96,7 @@
      :debug-tags-header "Schlagworte")
     ("zh-CN"  ;; simplified Chinese, traditional Chinese may use zh-TW or zh-HK
      :posted-on "发布于"
-     :post-timestamp "%Y-%m-%d %H:%M:%S"
+     :post-timestamp "%Y-%m-%d %H:%M"
      :related-tags "相关标签"
      :home "首页"
      :tags "标签"
